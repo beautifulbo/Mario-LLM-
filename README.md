@@ -1,5 +1,5 @@
 "# Mario-LLM-" 
-该系统是基于MAGB(https://github.com/sktsherlock/MAGB.git)进行重构的，关于Mario的代码实现位于MLLM下的
+该系统是基于MAGB(https://github.com/sktsherlock/MAGB.git) 进行重构的，关于Mario的代码实现位于MLLM下的
 
 @misc{yan2025graphmeetsmultimodalbenchmarking,
       title={When Graph meets Multimodal: Benchmarking and Meditating on Multimodal Attributed Graphs Learning},
