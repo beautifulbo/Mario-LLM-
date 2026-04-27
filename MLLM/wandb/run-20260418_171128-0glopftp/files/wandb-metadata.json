@@ -1,0 +1,46 @@
+{
+  "os": "Linux-5.15.0-78-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.12.3",
+  "startedAt": "2026-04-18T09:11:28.608750Z",
+  "args": [
+    "--num_epochs",
+    "1000",
+    "--batch_size",
+    "32"
+  ],
+  "program": "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py",
+  "codePath": "MLLM/train.py",
+  "codePathLocal": "train.py",
+  "git": {
+    "remote": "https://github.com/beautifulbo/MAGB-Benchmark.git",
+    "commit": "dfc4b182a183a7fe25d40e995d09fb765ee8564d"
+  },
+  "email": "1962754515@qq.com",
+  "root": "/root/autodl-tmp/MAGB-Benchmark/MLLM",
+  "host": "autodl-container-f02c408edc-a1b60e48",
+  "executable": "/root/miniconda3/bin/python",
+  "cpu_count": 64,
+  "cpu_count_logical": 128,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "32212254720",
+      "used": "27582074880"
+    }
+  },
+  "memory": {
+    "total": "1081810812928"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 4090",
+      "memoryTotal": "25757220864",
+      "cudaCores": 16384,
+      "architecture": "Ada",
+      "uuid": "GPU-e83f5b69-9c9f-49f4-5cc2-15bbedf8f001"
+    }
+  ],
+  "cudaVersion": "13.0",
+  "writerId": "s68yl1ec234ik9o52q5kfvrdy5wjodum"
+}

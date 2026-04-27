@@ -1,0 +1,44 @@
+Loading global distance matrix from ../Data/Reddit/RedditDist_train.pt ...
+Loaded! Shape: torch.Size([11125, 11125])
+Compiling model with torch.compile...
+  0%|                                                                                                                                                                    | 0/1000 [01:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 151, in <module>
+    main()
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 141, in main
+    train(model, dataloader, optimizer, device=torch.device("cuda" if torch.cuda.is_available() else "cpu"), num_epochs=args.num_epochs, save_path=args.save_path)
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 72, in train
+    loss.backward() # 反向传播计算新的梯度
+    ^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_tensor.py", line 521, in backward
+    torch.autograd.backward(
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/autograd/__init__.py", line 289, in backward
+    _engine_run_backward(
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/autograd/graph.py", line 768, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/autograd/function.py", line 306, in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 1861, in backward
+    out = call_compiled_backward()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 1809, in call_compiled_backward
+    out = call_func_at_runtime_with_args(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_functorch/_aot_autograd/utils.py", line 120, in call_func_at_runtime_with_args
+    out = normalize_as_list(f(args))
+                            ^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 600, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_inductor/codecache.py", line 1131, in __call__
+    return self.current_callable(inputs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 944, in run
+    return model(new_inputs)
+           ^^^^^^^^^^^^^^^^^
+  File "/tmp/torchinductor_root/cp/ccpdfply7y4dbv5u2pweu2t6esb76soee6wec4g5q7g2y734dxer.py", line 382, in call
+    buf9 = empty_strided_cuda((3584, 3584), (3584, 1), torch.float32)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 50.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 30.69 MiB is free. Including non-PyTorch memory, this process has 23.48 GiB memory in use. Of the allocated memory 23.01 GiB is allocated by PyTorch, and 7.33 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

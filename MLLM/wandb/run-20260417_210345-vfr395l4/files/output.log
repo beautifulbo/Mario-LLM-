@@ -1,0 +1,49 @@
+  0%|                                                                                                                                                       | 0/200 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 134, in <module>
+    main()
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 124, in main
+    train(model, dataloader, optimizer, device=torch.device("cuda" if torch.cuda.is_available() else "cpu"), num_epochs=args.num_epochs)
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 61, in train
+    text_features, image_features = model(texts.to(device), images.to(device), idx.to(device)) # (1,seq_len, dim)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 104, in forward
+    text_features = self.text_feature_extractor(text,idx)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 95, in forward
+    return self.repeated_attention(x,idx)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 86, in forward
+    x = self.attention[i](x,idx)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 61, in forward
+    self.graph_position_embedding(x,head,idx)  # 计算图位置嵌入
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 34, in graph_position_embedding
+    if self.shorest_path_matrix[node1][node2] == 0:
+       ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+IndexError: index 2450 is out of bounds for dimension 0 with size 32

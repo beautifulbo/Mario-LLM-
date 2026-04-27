@@ -1,0 +1,18 @@
+{"time":"2026-04-17T21:38:29.898899233+08:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-04-17T21:38:29.903536334+08:00","level":"INFO","msg":"stream: starting","core version":"0.26.0"}
+{"time":"2026-04-17T21:38:30.652558237+08:00","level":"INFO","msg":"stream: created new stream","id":"ubj4ikjc"}
+{"time":"2026-04-17T21:38:30.652661678+08:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-04-17T21:38:30.652838773+08:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-04-17T21:38:30.652880142+08:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-04-17T21:38:30.652887179+08:00","level":"INFO","msg":"writer: started","stream_id":"ubj4ikjc"}
+{"time":"2026-04-17T21:38:36.070176546+08:00","level":"INFO","msg":"filestream: sending request","total_files":1,"console_offset":0,"console_lines":1}
+{"time":"2026-04-17T21:38:44.235726026+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-17T21:38:51.07079272+08:00","level":"INFO","msg":"filestream: sending request","total_files":2,"events_offset":0,"events_lines":2,"console_offset":1,"console_lines":15,"uploaded_len":2}
+{"time":"2026-04-17T21:38:55.077757245+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-17T21:38:55.452033141+08:00","level":"INFO","msg":"stream: closing"}
+{"time":"2026-04-17T21:38:56.529050419+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-17T21:38:56.529563412+08:00","level":"INFO","msg":"filestream: sending request","total_files":2,"console_offset":16,"console_lines":55,"uploaded_len":3,"complete":true,"exit_code":1}
+{"time":"2026-04-17T21:39:01.143677615+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-17T21:39:01.144120103+08:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-04-17T21:39:01.144292988+08:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-04-17T21:39:01.144310361+08:00","level":"INFO","msg":"stream: closed"}

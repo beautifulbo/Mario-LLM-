@@ -1,0 +1,51 @@
+_wandb:
+    value:
+        cli_version: 0.26.0
+        e:
+            o1jjdomz7svpcxhbig9eg5c5eha9p765:
+                codePath: MLLM/train.py
+                codePathLocal: train.py
+                cpu_count: 64
+                cpu_count_logical: 128
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "32212254720"
+                        used: "27764617216"
+                email: 1962754515@qq.com
+                executable: /root/miniconda3/bin/python
+                git:
+                    commit: dfc4b182a183a7fe25d40e995d09fb765ee8564d
+                    remote: https://github.com/beautifulbo/MAGB-Benchmark.git
+                gpu: NVIDIA GeForce RTX 4090
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 16384
+                      memoryTotal: "25757220864"
+                      name: NVIDIA GeForce RTX 4090
+                      uuid: GPU-61fbc079-e97a-9b23-5ff7-303f9a1d7883
+                host: autodl-container-f02c408edc-a1b60e48
+                memory:
+                    total: "1081810812928"
+                os: Linux-5.15.0-78-generic-x86_64-with-glibc2.35
+                program: /root/autodl-tmp/MAGB-Benchmark/MLLM/train.py
+                python: CPython 3.12.3
+                root: /root/autodl-tmp/MAGB-Benchmark/MLLM
+                startedAt: "2026-04-17T13:03:45.214568Z"
+                writerId: o1jjdomz7svpcxhbig9eg5c5eha9p765
+        m: []
+        python_version: 3.12.3
+        t:
+            "1":
+                - 1
+                - 76
+            "2":
+                - 1
+                - 76
+            "3":
+                - 13
+            "4": 3.12.3
+            "5": 0.26.0
+            "12": 0.26.0
+            "13": linux-x86_64

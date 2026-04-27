@@ -1,0 +1,61 @@
+Loading global distance matrix from ../Data/Reddit/RedditDist.pt ...
+Loaded! Shape: torch.Size([15894, 15894])
+Compiling model with torch.compile...
+  0%|                                                                                                                                                      | 0/1000 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 207, in <module>
+    main()
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 197, in main
+    train(model, dataloader, optimizer, device=torch.device("cuda" if torch.cuda.is_available() else "cpu"), num_epochs=args.num_epochs)
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 66, in train
+    text_features, image_features = model(texts, images, idx,masks) # (1,seq_len, dim)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 433, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 127, in forward
+    def forward(self, text, image,idx,masks):
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 112, in forward
+    def forward(self, x,idx,masks):
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 104, in forward
+    x = self.attention[i](x,idx,masks)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 58, in forward
+    def forward(self, x, idx,masks):
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 600, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 50, in _compute_position_embedding_batch
+    dist_expanded = dist_matrix.unsqueeze(0).expand(self.num_heads, -1, -1)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: expand(torch.cuda.LongTensor{[1, 32, 10, 10]}, size=[8, -1, -1]): the number of sizes provided (3) must be greater or equal to the number of dimensions in the tensor (4)

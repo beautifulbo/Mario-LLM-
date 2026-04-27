@@ -1,0 +1,16 @@
+Loading global distance matrix from ../Data/Reddit/RedditDist_train.pt ...
+Loaded! Shape: torch.Size([11125, 11125])
+Compiling model with torch.compile...
+Traceback (most recent call last):
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 150, in <module>
+    main()
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 135, in main
+    train_data = MultiModalDataset(text_path=args.text_data_path, image_path=args.image_data_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 88, in __init__
+    "image": np.load(image_path,mmap_mode='r')  # 加载图像数据 (node_nums,embed_dim)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py", line 454, in load
+    fid = stack.enter_context(open(os.fspath(file), "rb"))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../Data/Reddit/ImageFeature/RedditS_Qwen2-VL-7B-Instruct_visual_train.npy'

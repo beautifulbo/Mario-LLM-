@@ -1,0 +1,206 @@
+Compiling model with torch.compile...
+  0%|                                                                                                                                                       | 0/200 [00:00<?, ?it/s]E0417 21:43:58.906000 140051203970880 torch/fx/experimental/recording.py:281] [0/0] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 21:43:58.977000 140051203970880 torch/fx/experimental/recording.py:281] [1/0] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 21:43:59.037000 140051203970880 torch/fx/experimental/recording.py:281] [2/0] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 21:43:59.077000 140051203970880 torch/fx/experimental/recording.py:281] [3/0] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 21:43:59.125000 140051203970880 torch/fx/experimental/recording.py:281] [4/0] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+W0417 21:43:59.180000 140051203970880 torch/_dynamo/exc.py:210] [4/0_1] Backend compiler failed with a fake tensor exception at
+W0417 21:43:59.180000 140051203970880 torch/_dynamo/exc.py:210] [4/0_1]   File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 37, in _compute_position_embedding_batch
+W0417 21:43:59.180000 140051203970880 torch/_dynamo/exc.py:210] [4/0_1]     subgraph = dgl.node_subgraph(self.graph, idx_list)
+W0417 21:43:59.180000 140051203970880 torch/_dynamo/exc.py:210] [4/0_1] Adding a graph break.
+W0417 21:43:59.226000 140051203970880 torch/_dynamo/exc.py:210] [4/0_2] Backend compiler failed with a fake tensor exception at
+W0417 21:43:59.226000 140051203970880 torch/_dynamo/exc.py:210] [4/0_2]   File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 37, in _compute_position_embedding_batch
+W0417 21:43:59.226000 140051203970880 torch/_dynamo/exc.py:210] [4/0_2]     subgraph = dgl.node_subgraph(self.graph, idx_list)
+W0417 21:43:59.226000 140051203970880 torch/_dynamo/exc.py:210] [4/0_2] Adding a graph break.
+/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/variables/functions.py:663: UserWarning: Graph break due to unsupported builtin torch._C._to_dlpack. This function is either a Python builtin (e.g. _warnings.warn) or a third-party C/C++ Python extension (perhaps created with pybind). If it is a Python builtin, please file an issue on GitHub so the PyTorch team can add support for it and see the next case for a workaround. If it is a third-party C/C++ Python extension, please either wrap it into a PyTorch-understood custom operator (see https://pytorch.org/tutorials/advanced/custom_ops_landing_page.html for more details) or, if it is traceable, use torch.compiler.allow_in_graph.
+  torch._dynamo.utils.warn_once(msg)
+E0417 21:44:07.858000 140051203970880 torch/fx/experimental/recording.py:281] [3/1] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 21:44:08.731000 140051203970880 torch/fx/experimental/recording.py:281] [3/2] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 21:44:09.612000 140051203970880 torch/fx/experimental/recording.py:281] [3/3] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 21:44:10.464000 140051203970880 torch/fx/experimental/recording.py:281] [3/4] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 21:44:11.313000 140051203970880 torch/fx/experimental/recording.py:281] [3/5] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 21:44:12.405000 140051203970880 torch/fx/experimental/recording.py:281] [59/0] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 21:44:12.476000 140051203970880 torch/fx/experimental/recording.py:281] [1/1] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 21:44:12.523000 140051203970880 torch/fx/experimental/recording.py:281] [3/6] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 21:44:13.335000 140051203970880 torch/fx/experimental/recording.py:281] [3/7] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 21:44:14.188000 140051203970880 torch/fx/experimental/recording.py:281] [3/8] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+  0%|                                                                                                                                                       | 0/200 [00:16<?, ?it/s]
+Traceback (most recent call last):
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 141, in <module>
+    main()
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 131, in main
+    train(model, dataloader, optimizer, device=torch.device("cuda" if torch.cuda.is_available() else "cpu"), num_epochs=args.num_epochs)
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 63, in train
+    text_features, image_features = model(texts, images, idx) # (1,seq_len, dim)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 433, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 117, in forward
+    def forward(self, text, image,idx):
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 118, in torch_dynamo_resume_in_forward_at_118
+    text_features = self.text_feature_extractor(text,idx)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 108, in forward
+    def forward(self, x,idx):
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 100, in forward
+    x = self.attention[i](x,idx)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 59, in forward
+    def forward(self, x, idx):
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/convert_frame.py", line 1116, in __call__
+    return self._torchdynamo_orig_callable(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/convert_frame.py", line 948, in __call__
+    result = self._inner_convert(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/convert_frame.py", line 472, in __call__
+    return _compile(
+           ^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_utils_internal.py", line 84, in wrapper_function
+    return StrobelightCompileTimeProfiler.profile_compile_time(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_strobelight/compile_time_profiler.py", line 129, in profile_compile_time
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/convert_frame.py", line 817, in _compile
+    guarded_code = compile_inner(code, one_graph, hooks, transform)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/utils.py", line 231, in time_wrapper
+    r = func(*args, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/convert_frame.py", line 636, in compile_inner
+    out_code = transform_code_object(code, transform)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/bytecode_transformation.py", line 1185, in transform_code_object
+    transformations(instructions, code_options)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/convert_frame.py", line 178, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/convert_frame.py", line 582, in transform
+    tracer.run()
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/symbolic_convert.py", line 2451, in run
+    super().run()
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/symbolic_convert.py", line 893, in run
+    while self.step():
+          ^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/symbolic_convert.py", line 805, in step
+    self.dispatch_table[inst.opcode](self, inst)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/symbolic_convert.py", line 2642, in RETURN_VALUE
+    self._return(inst)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/symbolic_convert.py", line 2627, in _return
+    self.output.compile_subgraph(
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/output_graph.py", line 1098, in compile_subgraph
+    self.compile_and_call_fx_graph(tx, list(reversed(stack_values)), root)
+  File "/root/miniconda3/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/output_graph.py", line 1318, in compile_and_call_fx_graph
+    compiled_fn = self.call_user_compiler(gm)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/utils.py", line 231, in time_wrapper
+    r = func(*args, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/output_graph.py", line 1390, in call_user_compiler
+    compiled_fn = compiler_fn(gm, self.example_inputs())
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/repro/after_dynamo.py", line 129, in __call__
+    compiled_gm = compiler_fn(gm, example_inputs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/__init__.py", line 1951, in __call__
+    return compile_fx(model_, inputs_, config_patches=self.config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 1505, in compile_fx
+    return aot_autograd(
+           ^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/backends/common.py", line 69, in __call__
+    cg = aot_module_simplified(gm, example_inputs, **self.kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_functorch/aot_autograd.py", line 954, in aot_module_simplified
+    compiled_fn, _ = create_aot_dispatcher_function(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/utils.py", line 231, in time_wrapper
+    r = func(*args, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_functorch/aot_autograd.py", line 687, in create_aot_dispatcher_function
+    compiled_fn, fw_metadata = compiler_fn(
+                               ^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_functorch/_aot_autograd/jit_compile_runtime_wrappers.py", line 461, in aot_dispatch_autograd
+    compiled_fw_func = aot_config.fw_compiler(fw_module, adjusted_flat_args)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/utils.py", line 231, in time_wrapper
+    r = func(*args, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 1410, in fw_compiler_base
+    return inner_compile(
+           ^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/repro/after_aot.py", line 84, in debug_wrapper
+    inner_compiled_fn = compiler_fn(gm, example_inputs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_inductor/debug.py", line 304, in inner
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/utils.py", line 231, in time_wrapper
+    r = func(*args, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 527, in compile_fx_inner
+    compiled_graph = fx_codegen_and_compile(
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 832, in fx_codegen_and_compile
+    num_bytes, nodes_num_elem, node_runtimes = graph.count_bytes()
+                                               ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_inductor/graph.py", line 1670, in count_bytes
+    node_runtimes.append((node, node.get_estimated_runtime()))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_inductor/scheduler.py", line 575, in get_estimated_runtime
+    with FakeTensorMode() as fake_mode, FlopCounterMode(
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/utils/flop_counter.py", line 686, in __exit__
+    super().__exit__(*args)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/utils/_python_dispatch.py", line 81, in __exit__
+    def __exit__(self, exc_type, exc_val, exc_tb):
+
+KeyboardInterrupt

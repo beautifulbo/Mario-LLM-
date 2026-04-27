@@ -1,0 +1,20 @@
+{"time":"2026-04-17T22:06:24.56538174+08:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-04-17T22:06:24.567905921+08:00","level":"INFO","msg":"stream: starting","core version":"0.26.0"}
+{"time":"2026-04-17T22:06:25.483259566+08:00","level":"INFO","msg":"stream: created new stream","id":"04nkoyji"}
+{"time":"2026-04-17T22:06:25.483354308+08:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-04-17T22:06:25.483556906+08:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-04-17T22:06:25.483594503+08:00","level":"INFO","msg":"writer: started","stream_id":"04nkoyji"}
+{"time":"2026-04-17T22:06:25.483606958+08:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-04-17T22:06:32.903288762+08:00","level":"INFO","msg":"filestream: sending request","total_files":1,"console_offset":0,"console_lines":1}
+{"time":"2026-04-17T22:06:38.644512892+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-17T22:06:47.903366395+08:00","level":"INFO","msg":"filestream: sending request","total_files":2,"events_offset":0,"events_lines":2,"console_offset":0,"console_lines":2,"uploaded_len":2}
+{"time":"2026-04-17T22:06:54.514808825+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-17T22:07:02.90330952+08:00","level":"INFO","msg":"filestream: sending request","total_files":1,"events_offset":2,"events_lines":2}
+{"time":"2026-04-17T22:07:05.946926116+08:00","level":"INFO","msg":"stream: closing"}
+{"time":"2026-04-17T22:07:06.801275167+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-17T22:07:10.41605896+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-17T22:07:10.416372221+08:00","level":"INFO","msg":"filestream: sending request","total_files":2,"console_offset":2,"console_lines":17,"uploaded_len":3,"complete":true,"exit_code":255}
+{"time":"2026-04-17T22:07:16.87516718+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-17T22:07:16.875526746+08:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-04-17T22:07:16.875685348+08:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-04-17T22:07:16.875699741+08:00","level":"INFO","msg":"stream: closed"}

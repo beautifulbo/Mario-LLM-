@@ -1,0 +1,27 @@
+{"time":"2026-04-17T20:36:00.35297893+08:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-04-17T20:36:00.35560065+08:00","level":"INFO","msg":"stream: starting","core version":"0.26.0"}
+{"time":"2026-04-17T20:36:01.262857223+08:00","level":"INFO","msg":"stream: created new stream","id":"t3gntg3o"}
+{"time":"2026-04-17T20:36:01.262970958+08:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-04-17T20:36:01.263164884+08:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-04-17T20:36:01.263207432+08:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-04-17T20:36:01.263209837+08:00","level":"INFO","msg":"writer: started","stream_id":"t3gntg3o"}
+{"time":"2026-04-17T20:36:02.08404383+08:00","level":"INFO","msg":"stream: closing"}
+{"time":"2026-04-17T20:36:02.084794904+08:00","level":"INFO","msg":"filestream: sending request","total_files":1}
+{"time":"2026-04-17T20:36:03.159242476+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-17T20:36:03.438404177+08:00","level":"INFO","msg":"api: retrying error","error":"Put \"https://storage.googleapis.com/wandb-production.appspot.com/1962754515-tianjin-university/MAGB-Benchmark/t3gntg3o/wandb-summary.json?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer%40wandb-production.iam.gserviceaccount.com%2F20260417%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20260417T123602Z&X-Goog-Expires=86399&X-Goog-Signature=a901584c4d3f29d6d1635285121769002eafaa5a6dd32ddc7a755dcf03432e220f528a765ec4be82c5a6a70cdbbce923168221a8ad3a28ed3a83dc54787ed2535d0f1dcf5db138de06a3971e3745b08f630280a8960db4d01d526b0dad100907d9532e8b60c83bf3498019f20e099881049ee4d6fdf3157d068d39f86cc7f23ec9e7271d1a68091a6f9ce7546cab02d7977088d6d8d5058732b56646e5fc01c525fe09f0d15e9876395881ed718c11881abcca61b8779620025e7e2780cdf71367acb6b20c92d5cc0df245654d21c87184bd235785c997cd280768f89c36bb1640c7af3e0eec4fe406c6d7f4bc2bc7a104a3566d19a8e220ecc7fc29721f4fc5&X-Goog-SignedHeaders=host&X-User=1962754515\": read tcp 172.17.0.2:54694->142.250.73.155:443: read: connection reset by peer"}
+{"time":"2026-04-17T20:36:32.085641729+08:00","level":"INFO","msg":"filestream: sending request","total_files":0}
+{"time":"2026-04-17T20:36:32.445629814+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-17T20:37:02.085872916+08:00","level":"INFO","msg":"filestream: sending request","total_files":0}
+{"time":"2026-04-17T20:37:03.668755968+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-17T20:37:32.086705173+08:00","level":"INFO","msg":"filestream: sending request","total_files":0}
+{"time":"2026-04-17T20:37:32.518308262+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-17T20:38:02.086857641+08:00","level":"INFO","msg":"filestream: sending request","total_files":0}
+{"time":"2026-04-17T20:38:02.510233096+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-17T20:38:14.992204379+08:00","level":"INFO","msg":"filestream: sending request","total_files":0,"uploaded_len":1}
+{"time":"2026-04-17T20:38:15.300353239+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-17T20:38:15.441531065+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-17T20:38:15.441948766+08:00","level":"INFO","msg":"filestream: sending request","total_files":0,"uploaded_len":3,"complete":true,"exit_code":0}
+{"time":"2026-04-17T20:38:16.020358348+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-17T20:38:16.020649761+08:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-04-17T20:38:16.02077454+08:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-04-17T20:38:16.020789519+08:00","level":"INFO","msg":"stream: closed"}

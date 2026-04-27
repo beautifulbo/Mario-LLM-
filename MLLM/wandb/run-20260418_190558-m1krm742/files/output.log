@@ -1,0 +1,44 @@
+Loading global distance matrix from ../Data/Reddit/RedditDist_train.pt ...
+Loaded! Shape: torch.Size([11125, 11125])
+Compiling model with torch.compile...
+ 50%|██████████████████████████████████████████████████████████████████▎                                                                  | 499/1000 [2:10:01<2:10:32, 15.63s/it]
+Saving model checkpoint...
+Model checkpoint saved to ../trained_models/mario_feature_extractor_epoch_50.pth
+Saving model checkpoint...
+Model checkpoint saved to ../trained_models/mario_feature_extractor_epoch_100.pth
+Saving model checkpoint...
+Model checkpoint saved to ../trained_models/mario_feature_extractor_epoch_150.pth
+Saving model checkpoint...
+Model checkpoint saved to ../trained_models/mario_feature_extractor_epoch_200.pth
+Saving model checkpoint...
+Model checkpoint saved to ../trained_models/mario_feature_extractor_epoch_250.pth
+Saving model checkpoint...
+Model checkpoint saved to ../trained_models/mario_feature_extractor_epoch_300.pth
+Saving model checkpoint...
+Model checkpoint saved to ../trained_models/mario_feature_extractor_epoch_350.pth
+Saving model checkpoint...
+Model checkpoint saved to ../trained_models/mario_feature_extractor_epoch_400.pth
+Saving model checkpoint...
+Model checkpoint saved to ../trained_models/mario_feature_extractor_epoch_450.pth
+Saving model checkpoint...
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/serialization.py", line 652, in save
+    _save(obj, opened_zipfile, pickle_module, pickle_protocol, _disable_byteorder_record)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/serialization.py", line 886, in _save
+    zip_file.write_record(name, storage, num_bytes)
+RuntimeError: [enforce fail at inline_container.cc:778] . PytorchStreamWriter failed writing file data/72: file write failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 150, in <module>
+    main()
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 140, in main
+    train(model, dataloader, optimizer, device=torch.device("cuda" if torch.cuda.is_available() else "cpu"), num_epochs=args.num_epochs)
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 81, in train
+    torch.save(model.state_dict(), os.path.join(save_path, f"mario_feature_extractor_epoch_{epoch+1}.pth"))
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/serialization.py", line 651, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/serialization.py", line 499, in __exit__
+    self.file_like.write_end_of_file()
+RuntimeError: [enforce fail at inline_container.cc:603] . unexpected pos 2621488832 vs 2621488720

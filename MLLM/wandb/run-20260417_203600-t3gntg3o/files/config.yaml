@@ -1,0 +1,34 @@
+_wandb:
+    value:
+        cli_version: 0.26.0
+        e:
+            vj3pi9vofbf3qkgab6xaqbbn2dohcc7q:
+                codePath: MLLM/train.py
+                codePathLocal: train.py
+                email: 1962754515@qq.com
+                executable: /root/miniconda3/bin/python
+                git:
+                    commit: dfc4b182a183a7fe25d40e995d09fb765ee8564d
+                    remote: https://github.com/beautifulbo/MAGB-Benchmark.git
+                host: autodl-container-f02c408edc-a1b60e48
+                os: Linux-5.15.0-78-generic-x86_64-with-glibc2.35
+                program: /root/autodl-tmp/MAGB-Benchmark/MLLM/train.py
+                python: CPython 3.12.3
+                root: /root/autodl-tmp/MAGB-Benchmark/MLLM
+                startedAt: "2026-04-17T12:36:00.062396Z"
+                writerId: vj3pi9vofbf3qkgab6xaqbbn2dohcc7q
+        m: []
+        python_version: 3.12.3
+        t:
+            "1":
+                - 1
+                - 76
+            "2":
+                - 1
+                - 76
+            "3":
+                - 13
+            "4": 3.12.3
+            "5": 0.26.0
+            "12": 0.26.0
+            "13": linux-x86_64

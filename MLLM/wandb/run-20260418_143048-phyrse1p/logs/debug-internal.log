@@ -1,0 +1,18 @@
+{"time":"2026-04-18T14:30:48.430625694+08:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-04-18T14:30:48.433226827+08:00","level":"INFO","msg":"stream: starting","core version":"0.26.0"}
+{"time":"2026-04-18T14:30:49.274896838+08:00","level":"INFO","msg":"stream: created new stream","id":"phyrse1p"}
+{"time":"2026-04-18T14:30:49.274987958+08:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-04-18T14:30:49.275157436+08:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-04-18T14:30:49.275206277+08:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-04-18T14:30:49.275199246+08:00","level":"INFO","msg":"writer: started","stream_id":"phyrse1p"}
+{"time":"2026-04-18T14:30:50.132630781+08:00","level":"INFO","msg":"filestream: sending request","total_files":1,"console_offset":0,"console_lines":1}
+{"time":"2026-04-18T14:30:50.879969176+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-18T14:30:58.506182709+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":65}
+{"time":"2026-04-18T14:30:58.511446718+08:00","level":"INFO","msg":"stream: closing"}
+{"time":"2026-04-18T14:30:58.52255753+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":66}
+{"time":"2026-04-18T14:30:59.924679693+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-18T14:30:59.925937079+08:00","level":"INFO","msg":"filestream: sending request","total_files":2,"console_offset":1,"console_lines":167,"uploaded_len":5,"complete":true,"exit_code":1}
+{"time":"2026-04-18T14:31:00.6262495+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-18T14:31:00.62653199+08:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-04-18T14:31:00.626589863+08:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-04-18T14:31:00.626602856+08:00","level":"INFO","msg":"stream: closed"}

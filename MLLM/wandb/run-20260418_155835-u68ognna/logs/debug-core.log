@@ -1,0 +1,13 @@
+{"time":"2026-04-18T15:58:35.413829838+08:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmp220fzfw3/port-1912.txt","pid":1912,"detached":false,"idle-timeout":600000000000,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2026-04-18T15:58:35.414839561+08:00","level":"INFO","msg":"server: will exit if parent process dies","ppid":1912}
+{"time":"2026-04-18T15:58:35.414760167+08:00","level":"INFO","msg":"server: accepting connections","addr":{"Name":"/tmp/wandb-1912-1957-3368429754/socket","Net":"unix"}}
+{"time":"2026-04-18T15:58:35.595214206+08:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(@)"}
+{"time":"2026-04-18T15:58:35.612979855+08:00","level":"INFO","msg":"handleInformInit: received","streamId":"u68ognna","id":"1(@)"}
+{"time":"2026-04-18T15:58:36.489920043+08:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"u68ognna","id":"1(@)"}
+{"time":"2026-04-18T16:00:05.659109008+08:00","level":"INFO","msg":"connection: cancelling request","id":"1(@)","requestId":"oslktw0ic0xg"}
+{"time":"2026-04-18T16:00:05.685792588+08:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"1(@)"}
+{"time":"2026-04-18T16:00:05.685880187+08:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2026-04-18T16:00:05.685922322+08:00","level":"INFO","msg":"connection: closing","id":"1(@)"}
+{"time":"2026-04-18T16:00:05.68607092+08:00","level":"INFO","msg":"connection: closed successfully","id":"1(@)"}
+{"time":"2026-04-18T16:00:05.686065897+08:00","level":"INFO","msg":"server: listener closed","addr":{"Name":"/tmp/wandb-1912-1957-3368429754/socket","Net":"unix"}}
+{"time":"2026-04-18T16:00:25.825255736+08:00","level":"INFO","msg":"server: parent process exited, terminating service process"}

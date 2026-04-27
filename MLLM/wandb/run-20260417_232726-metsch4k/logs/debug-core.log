@@ -1,0 +1,13 @@
+{"time":"2026-04-17T23:27:26.323692038+08:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpgfwhconq/port-37719.txt","pid":37719,"detached":false,"idle-timeout":600000000000,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2026-04-17T23:27:26.324598738+08:00","level":"INFO","msg":"server: will exit if parent process dies","ppid":37719}
+{"time":"2026-04-17T23:27:26.324578829+08:00","level":"INFO","msg":"server: accepting connections","addr":{"Name":"/tmp/wandb-37719-37756-3245040501/socket","Net":"unix"}}
+{"time":"2026-04-17T23:27:26.494240217+08:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(@)"}
+{"time":"2026-04-17T23:27:26.508772094+08:00","level":"INFO","msg":"handleInformInit: received","streamId":"metsch4k","id":"1(@)"}
+{"time":"2026-04-17T23:27:27.268740136+08:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"metsch4k","id":"1(@)"}
+{"time":"2026-04-17T23:27:33.368837775+08:00","level":"INFO","msg":"connection: cancelling request","id":"1(@)","requestId":"ctp6gpa9cb54"}
+{"time":"2026-04-18T00:08:44.811630349+08:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"1(@)"}
+{"time":"2026-04-18T00:08:44.811720149+08:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2026-04-18T00:08:44.811750938+08:00","level":"INFO","msg":"connection: closing","id":"1(@)"}
+{"time":"2026-04-18T00:08:44.811890514+08:00","level":"INFO","msg":"connection: closed successfully","id":"1(@)"}
+{"time":"2026-04-18T00:08:44.811883787+08:00","level":"INFO","msg":"server: listener closed","addr":{"Name":"/tmp/wandb-37719-37756-3245040501/socket","Net":"unix"}}
+{"time":"2026-04-18T00:08:48.570687878+08:00","level":"INFO","msg":"server: parent process exited, terminating service process"}

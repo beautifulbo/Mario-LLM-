@@ -1,0 +1,19 @@
+{"time":"2026-04-17T21:12:13.203888321+08:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-04-17T21:12:13.206471029+08:00","level":"INFO","msg":"stream: starting","core version":"0.26.0"}
+{"time":"2026-04-17T21:12:13.924383598+08:00","level":"INFO","msg":"stream: created new stream","id":"3vpzvqox"}
+{"time":"2026-04-17T21:12:13.924492408+08:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-04-17T21:12:13.924698843+08:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-04-17T21:12:13.924732325+08:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-04-17T21:12:13.924734916+08:00","level":"INFO","msg":"writer: started","stream_id":"3vpzvqox"}
+{"time":"2026-04-17T21:12:19.935515677+08:00","level":"INFO","msg":"api: retrying error","error":"Put \"https://storage.googleapis.com/wandb-production.appspot.com/1962754515-tianjin-university/MAGB-Benchmark/3vpzvqox/requirements.txt?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer%40wandb-production.iam.gserviceaccount.com%2F20260417%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20260417T131219Z&X-Goog-Expires=86399&X-Goog-Signature=4034c47224e62e1f83aebf3470d721e24222d287e5ee43743df9aa864442c114e2b9a5694fa81eed7ee18b6b0bcc715ec9b8b953600c7208278f900e50cb7a98599a9cb5098c62b1553098fbf9c66b8cf87eda9a8283efd972a57ebff37492f0b274da728af19e17401302b9b1b3086de81c093cdbd996b87cfd76cd4a0142f7acbc38ea231c8e457d7b11e8047cc177d8bc5d357b076a1d233161636402cc6e97cacdd4d0919c83eaa4eb74d5c14a31a395b8cc0118b3a07c8abdc973ba0b45095c58215099dde826eb21ff2e4f6e7e7435b7f2d9b6279911e0af889e32a3d3d04850e2c3a46275a1bf0aa2ac2c0cd1eafdab31888316f20da162e42a297d3c&X-Goog-SignedHeaders=host&X-User=1962754515\": read tcp 172.17.0.2:42808->142.250.73.155:443: read: connection reset by peer"}
+{"time":"2026-04-17T21:12:21.102760227+08:00","level":"INFO","msg":"filestream: sending request","total_files":1,"console_offset":0,"console_lines":1}
+{"time":"2026-04-17T21:12:21.863753359+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-17T21:12:36.104512137+08:00","level":"INFO","msg":"filestream: sending request","total_files":2,"events_offset":0,"events_lines":2,"console_offset":0,"console_lines":60}
+{"time":"2026-04-17T21:12:36.672277145+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-17T21:12:37.93707536+08:00","level":"INFO","msg":"stream: closing"}
+{"time":"2026-04-17T21:12:39.719732962+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-17T21:12:39.720252324+08:00","level":"INFO","msg":"filestream: sending request","total_files":2,"console_offset":60,"console_lines":60,"uploaded_len":5,"complete":true,"exit_code":255}
+{"time":"2026-04-17T21:12:40.111477138+08:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-17T21:12:40.111793399+08:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-04-17T21:12:40.111949843+08:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-04-17T21:12:40.111963646+08:00","level":"INFO","msg":"stream: closed"}

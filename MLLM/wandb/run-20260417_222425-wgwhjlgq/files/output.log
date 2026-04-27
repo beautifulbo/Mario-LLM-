@@ -1,0 +1,81 @@
+Loading global distance matrix from ../Data/Reddit/RedditDist.pt ...
+Loaded! Shape: torch.Size([15894, 15894])
+Compiling model with torch.compile...
+  0%|                                                                                                                                                                                                | 0/200 [00:00<?, ?it/s]E0417 22:24:34.690000 139905474930496 torch/fx/experimental/recording.py:281] [0/0] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 22:24:34.753000 139905474930496 torch/fx/experimental/recording.py:281] [1/0] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 22:24:34.804000 139905474930496 torch/fx/experimental/recording.py:281] [2/0] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 22:24:34.834000 139905474930496 torch/fx/experimental/recording.py:281] [3/0] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 22:24:34.873000 139905474930496 torch/fx/experimental/recording.py:281] [4/0] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+W0417 22:24:34.927000 139905474930496 torch/_dynamo/exc.py:210] [4/0_1] Backend compiler failed with a fake tensor exception at
+W0417 22:24:34.927000 139905474930496 torch/_dynamo/exc.py:210] [4/0_1]   File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 38, in _compute_position_embedding_batch
+W0417 22:24:34.927000 139905474930496 torch/_dynamo/exc.py:210] [4/0_1]     dist_matrix = self.dist_matrix[idx_list][:, idx_list]
+W0417 22:24:34.927000 139905474930496 torch/_dynamo/exc.py:210] [4/0_1] Adding a graph break.
+W0417 22:24:34.970000 139905474930496 torch/_dynamo/exc.py:210] [4/0_2] Backend compiler failed with a fake tensor exception at
+W0417 22:24:34.970000 139905474930496 torch/_dynamo/exc.py:210] [4/0_2]   File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 38, in _compute_position_embedding_batch
+W0417 22:24:34.970000 139905474930496 torch/_dynamo/exc.py:210] [4/0_2]     dist_matrix = self.dist_matrix[idx_list][:, idx_list]
+W0417 22:24:34.970000 139905474930496 torch/_dynamo/exc.py:210] [4/0_2] Adding a graph break.
+E0417 22:24:36.976000 139905474930496 torch/fx/experimental/recording.py:281] [3/1] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 22:24:37.825000 139905474930496 torch/fx/experimental/recording.py:281] [3/2] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 22:24:38.707000 139905474930496 torch/fx/experimental/recording.py:281] [3/3] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 22:24:39.546000 139905474930496 torch/fx/experimental/recording.py:281] [3/4] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 22:24:40.594000 139905474930496 torch/fx/experimental/recording.py:281] [3/5] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 22:24:41.497000 139905474930496 torch/fx/experimental/recording.py:281] [6/0] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 22:24:41.558000 139905474930496 torch/fx/experimental/recording.py:281] [1/1] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 22:24:41.595000 139905474930496 torch/fx/experimental/recording.py:281] [3/6] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 22:24:42.401000 139905474930496 torch/fx/experimental/recording.py:281] [3/7] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 22:24:43.222000 139905474930496 torch/fx/experimental/recording.py:281] [3/8] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 22:24:44.045000 139905474930496 torch/fx/experimental/recording.py:281] [3/9] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 22:24:44.856000 139905474930496 torch/fx/experimental/recording.py:281] [3/10] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+E0417 22:24:45.678000 139905474930496 torch/fx/experimental/recording.py:281] [3/11] failed while running evaluate_expr(*(u0, None), **{'fx_node': None})
+  2%|██▋                                                                                                                                                                                   | 3/200 [03:43<4:04:54, 74.59s/it]
+Traceback (most recent call last):
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 143, in <module>
+    main()
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 133, in main
+    train(model, dataloader, optimizer, device=torch.device("cuda" if torch.cuda.is_available() else "cpu"), num_epochs=args.num_epochs)
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/train.py", line 63, in train
+    text_features, image_features = model(texts, images, idx) # (1,seq_len, dim)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 433, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 120, in forward
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 105, in forward
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 97, in forward
+    for i in range(self.layers):
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 56, in forward
+  File "/root/autodl-tmp/MAGB-Benchmark/MLLM/Mario.py", line 39, in _compute_position_embedding_batch
+    dist_matrix = self.dist_matrix[idx_list][:, idx_list]
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+KeyboardInterrupt
